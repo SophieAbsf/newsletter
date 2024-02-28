@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Confirm gpt') }}
         </h2>
     </x-slot>
 
@@ -10,12 +10,10 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             <form method="post" action="{{ route('send') }}">
                 @csrf
-                <form action="{{ route('gpt') }}" method="post">
-                    @csrf
                 <p>
                     <label class="Send" for="envoyer">Envoyer une news</label><br>
-                    <input class="Title" type="text" id="title" name="title" placeholder="Titre" required minlength="10" maxlength="30" size="50" /><br>
-                    <textarea class="champ" name="content" id="envoyer" rows="10" calls="200"></textarea><br>
+                    <input class="Title" value="{{ $title }}" type="text" id="title" name="title" placeholder="Titre" required minlength="10" maxlength="30" size="50" /><br>
+                    <textarea class="champ" name="content"  id="envoyer" rows="10" calls="200">{{ $answer }}</textarea><br>
                     <style>
                     .button {
                     display: inline-block;
@@ -62,14 +60,9 @@
                       <option value="last"> Envoyer à tous </option>
                       </select>
                   </div>
-                  
-                    <input class="button" type="submit" value="Générer la news" />
-                </form>
                 <input class="button" type="submit" value="Envoyer" />
-                
                 </p>
             </form>
-            
             </div>
         </div>
     </div>

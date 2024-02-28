@@ -26,8 +26,6 @@ Route::get('/', function () {
 
 Route::post('repertoire', [RepertoireController::class, 'store'])->name("repertori");
 
-Route::post('send', [SenderController::class, 'send'])->name("send");
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -41,4 +39,8 @@ Route::middleware([
             'mails' => $mails
         ]);
     })->name('dashboard');
+
+    Route::post('send', [SenderController::class, 'send'])->name("send");
+
+    Route::post('gpt', [GptController::class, 'gpt'])->name("gpt");
 });

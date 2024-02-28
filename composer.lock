@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ba5c914d8c010559eef3e98691d0957",
+    "content-hash": "4eb7873517cc645e2d1cb1978a5a9ea0",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1148,6 +1148,70 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "hesamrad/laravel-chatgpt",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hesamzakerirad/laravel-chatgpt.git",
+                "reference": "57c756b3042d2b03f21c82f95e0820c53e4a8e45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hesamzakerirad/laravel-chatgpt/zipball/57c756b3042d2b03f21c82f95e0820c53e4a8e45",
+                "reference": "57c756b3042d2b03f21c82f95e0820c53e4a8e45",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.8",
+                "illuminate/support": "^10.30",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.14",
+                "phpunit/phpunit": "^10.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "HesamRad\\LaravelChatGpt\\LaravelChatGptServiceProvider"
+                    ],
+                    "aliases": {
+                        "ChatGpt": "HesamRad\\LaravelChatGpt\\ChatGptFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "HesamRad\\LaravelChatGpt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hesam Rad",
+                    "email": "hesamzakerirad@gmail.com",
+                    "homepage": "https://hesamrad.com"
+                }
+            ],
+            "description": "A lightweight library to integrate chatGpt into your Laravel application!",
+            "keywords": [
+                "ChatGpt",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/hesamzakerirad/laravel-chatgpt/issues",
+                "source": "https://github.com/hesamzakerirad/laravel-chatgpt/tree/v1.0.0"
+            },
+            "time": "2023-11-02T10:14:07+00:00"
         },
         {
             "name": "laravel/fortify",
